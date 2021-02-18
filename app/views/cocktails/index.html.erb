@@ -1,5 +1,7 @@
 <h1>Cocktails Page</h1>
 
+<%= link_to 'Create a new Cocktail',  new_cocktail_path, class: 'btn btn-danger'  %>
+
 <ul>
     <% @cocktails.each do |cocktail| %>
     <li>
