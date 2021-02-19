@@ -15,7 +15,11 @@
     <div class="row d-flex">
         <% @cocktails.each do |cocktail| %>
             <div class="card-product col-5 d-flex flex-row justify-content-between mx-3 mt-3 py-3 px-5">
-                <%= cl_image_tag cocktail.photo.key, height: 400, width: 400, crop: :fill %>
+                <% if cocktail.photo.attached? %>
+                    <%= cl_image_tag cocktail.photo.key, height: 400, width: 400, crop: :fill %>
+                <% else %>
+                    <img class="ml-0" src="https://www.pngitem.com/pimgs/m/80-807363_cocktails-neon-sign-png-transparent-png.png"/> 
+                <% end %> 
                 <div class="card-info pr-3">
                     <h3 class="">
                         <%= link_to  "#{cocktail.name}", cocktail_path(cocktail), class: "cocktail-name" %>
