@@ -15,7 +15,7 @@
     <div class="row d-flex">
         <% @cocktails.each do |cocktail| %>
             <div class="card-product col-5 d-flex flex-row justify-content-between mx-3 mt-3 py-3 px-5">
-                <%= cl_image_tag cocktail.photo.key, width: 400 %>
+                <%= cl_image_tag cocktail.photo.key, width: 400, height: 400 %>
                 <div class="card-info pr-3">
                     <h3 class="">
                         <%= link_to  "#{cocktail.name}", cocktail_path(cocktail), class: "cocktail-name" %>
