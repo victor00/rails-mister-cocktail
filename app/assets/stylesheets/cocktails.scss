@@ -10,22 +10,21 @@
 //    background: repeating-linear-gradient(45deg, #2b2b2b 0%, #2b2b2b 10%, #222222 0%, #222222 50%) 0 / 15px 15px;
 // }
 
+i { 
+  color: #212529;
+}
+
 li {
 	list-style-type: none;
 }
 
-a {
+a, i {
 	text-decoration: none;
 	&:hover {
 		text-decoration: none;
         color: orange;
 	}
 }
-
-p, li {
-	font-size: 30px;
-}
-
 
 .btn-gradient {
   color: white;
