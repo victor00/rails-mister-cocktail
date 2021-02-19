@@ -1,11 +1,27 @@
-<h1>Cocktails Page</h1>
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://s7ap1.scene7.com/is/image/destqueensland/teq/consumer/global/images/destinations/brisbane/blog-images/editorial-hero-banner/2018_BNE_Brisbane_FoodAndBeverage_TheBestBarsInBrisbane.jpg?fit=wrap&fmt=webp&qlt=40&wid=1200);">
+  <div class="container">
+    <div class="mx-5 mb-5 pl-5 fixed-top overflow-hidden w-100">
+        <h1 id="typed-cocktail-title"></h1>
+    </div>
+  </div>
+</div>
 
-<%= link_to 'Create a new Cocktail',  new_cocktail_path, class: 'btn btn-danger'  %>
+<div class="btn-create m-3 p-3">
+    <%= link_to 'Create a new Cocktail',  new_cocktail_path, class: 'btn btn-gradient'  %>
+</div>
 
-<ul>
-    <% @cocktails.each do |cocktail| %>
-    <li>
-        <p><%= link_to  "#{cocktail.name}", cocktail_path(cocktail) %></p>
-    </li>
-    <% end %>
-</ul>
+<% @cocktails.each do |cocktail| %>
+    <div class="col-lg-12 col-md-12 col-sm-12">
+        <div class="card-product m-3 w-25">
+        <img src="https://www.pngitem.com/pimgs/m/80-807363_cocktails-neon-sign-png-transparent-png.png"/>
+            <div class="card-product-infos">
+                <h3>
+                    <%= link_to  "#{cocktail.name}", cocktail_path(cocktail), class: "cocktail-name" %>
+                    <%= link_to cocktail_path(cocktail), method: :delete, data: { confirm: "Delete Cocktail?" } do %>
+                        <i class="fas fa-trash"></i>
+                    <% end %>
+                </h3>
+            </div>
+        </div>
+    </div>
+<% end %>

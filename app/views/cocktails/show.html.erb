@@ -1,13 +1,38 @@
-<h1><%= @cocktail.name %></h1>
+<div class="container mt-5">
 
-<% @cocktail.doses.each do |dose| %>
-    <p>
-        <strong><%= dose.description %></strong> Doses Of <strong><%= dose.ingredient.name %></strong>
-        <%= link_to dose_path(dose), method: :delete, data: { confirm: "Delete Dose?" } do %>
-                <i class="fas fa-trash"></i>
-        <% end %>
-    </p>
-<% end %>
+    <h2>
+        <%= @cocktail.name %> 
+        <i class="fas fa-cocktail"></i>
+    </h2>
 
-<%= link_to 'Add Dose',  new_cocktail_dose_path(@cocktail), class: 'btn btn-primary'  %>
-<%= link_to "Back to Drinks List",  cocktails_path, class: 'btn btn-primary'  %>
+    <div class="table-responsive mt-5">
+        <table class="table table-dark table-striped text-center">
+            <thead>
+                <tr>
+                    <%# < scope="col"><%= @cocktail.name %>
+                    <th scope="col">Doses</th>
+                    <th scope="col">Ingredient</th>
+                    <th scope="col">Delete</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% @cocktail.doses.each do |dose| %>
+                        <tr>
+                            <%# <th scope="row"><%= @cocktail.doses.find_index(dose) + 1 %>
+                            <td><%= dose.description %></td> 
+                            <td><%= dose.ingredient.name %></td>
+                            <td>
+                                <%= link_to dose_path(dose), method: :delete, data: { confirm: "Delete Dose?" } do %>
+                                        <i class="fas fa-trash"></i>
+                                <% end %>
+                            </td>
+                        </tr>
+                <% end %>
+            </tbody>
+        </table>
+    </div>
+
+    <%= link_to 'Add Dose',  new_cocktail_dose_path(@cocktail), class: 'btn btn-gradient'  %>
+    <%= link_to "Back to Drinks List",  cocktails_path, class: 'btn btn-gradient'  %>
+
+</div>
