@@ -11,10 +11,10 @@
 </div>
 
 <% @cocktails.each do |cocktail| %>
-    <div class="col-lg-12 col-md-12 col-sm-12">
-        <div class="card-product m-3 w-25">
+    <div class="col-lg-12 col-md-12 col-sm-12 card-max">
+        <div class="card-product m-3 w-25 pl-2">
         <img src="https://www.pngitem.com/pimgs/m/80-807363_cocktails-neon-sign-png-transparent-png.png"/>
-            <div class="card-product-infos">
+            <div class="card-product-infos pl-5">
                 <h3>
                     <%= link_to  "#{cocktail.name}", cocktail_path(cocktail), class: "cocktail-name" %>
                     <%= link_to cocktail_path(cocktail), method: :delete, data: { confirm: "Delete Cocktail?" } do %>

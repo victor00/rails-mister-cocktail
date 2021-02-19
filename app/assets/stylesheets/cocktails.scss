@@ -62,14 +62,17 @@ p, li {
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
 }
 
+.img {
+  background-color: #222222;
+}
+
 .card-product {
   overflow: hidden;
-  height: 120px;
-  background: #F7F7F7;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   display: flex;
   align-items: center;
   min-height: 120px;
+  max-height: 120px;
   min-width: 120px;
   max-width: 100%;
 }
@@ -117,5 +120,13 @@ h1, h2 {
   }
   to {
     text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e00303, 0 0 40px #e00303, 0 0 50px #e00303, 0 0 60px #e00303, 0 0 70px #e00303;
+  }
+}
+
+
+@media screen and (min-width: 600px) {
+  .card-max {
+    float: none;
+    width: 100%;
   }
 }
