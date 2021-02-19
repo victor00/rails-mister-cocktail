@@ -2,7 +2,7 @@
   <h2>Add Cocktail</h2>
   <%= simple_form_for [@cocktail] do |f| %>
     <%= f.input :name, label: 'Cocktail Name' %><br>
-    <%= f.input :photo, label: 'Cocktail Image', as: :file, class: 'mt-2' %><br>
+    <%= f.input :photo, label: 'Cocktail Image', as: :file %><br>
     <%= f.submit class: 'btn btn-gradient mt-2' %>
     <%= link_to "Back to Drinks List",  cocktails_path, class: 'btn btn-gradient mt-2'  %>
   <% end %>
