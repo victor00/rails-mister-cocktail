@@ -19,10 +19,16 @@ puts 'database is clean!'
 
 puts 'Creating ingredients'
 
-10.times do
-  new_drink = drinks.sample
+new_drink = []
+
+15.times do
+  new_drink << drinks.sample.values.first
+  new_drink.uniq.flatten
+end
+
+new_drink.each do |drink|
   ingredient = Ingredient.create(
-    name: new_drink.values.first
+    name: drink.capitalize
   )
   puts "ingredient #{ingredient.id} is created."
 end
