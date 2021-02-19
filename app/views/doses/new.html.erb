@@ -1,9 +1,11 @@
-<h1>Add Doses</h1>
-<%= simple_form_for [@cocktail, @dose] do |f| %>
-  <%= f.input :description %>
-  <%= f.association :ingredient, collection: Ingredient.all %>
-  <%= f.submit class: 'btn btn-gradient' %>
-<% end %>
+<div class="container p-5">
+  <h2>Add Doses</h2>
+  <%= simple_form_for [@cocktail, @dose] do |f| %>
+    <%= f.input :description, label: "Dose Description" %>
+    <%= f.association :ingredient, collection: Ingredient.all %>
+    <%= f.submit class: 'btn btn-gradient' %>
+      <%= link_to "Back to #{@cocktail.name}",  cocktail_path(@cocktail), class: 'btn btn-gradient'  %>
+  <% end %>
 
-<%# <%= f.association :ingredients, collection: Ingredient.all %>
-<%= link_to "Back to #{@cocktail.name}",  cocktail_path(@cocktail), class: 'btn btn-gradient'  %>
+  <%# <%= f.association :ingredients, collection: Ingredient.all %>
+</div>

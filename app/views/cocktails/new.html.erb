@@ -1,8 +1,12 @@
-<%= simple_form_for [@cocktail] do |f| %>
-  <%= f.input :name %>
-  <%= f.submit class: 'btn btn-gradient' %>
-  <%= link_to "Back to Drinks List",  cocktails_path, class: 'btn btn-gradient'  %>
-<% end %>
+<div class="container p-5">
+  <h2>Add Cocktail</h2>
+  <%= simple_form_for [@cocktail] do |f| %>
+    <%= f.input :name, label: 'Cocktail Name' %>
+    <%= f.submit class: 'btn btn-gradient' %>
+    <%= link_to "Back to Drinks List",  cocktails_path, class: 'btn btn-gradient'  %>
+  <% end %>
+</div>
+
 
 
  

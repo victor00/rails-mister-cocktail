@@ -5,10 +5,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Rye&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Warnes&display=swap');
 
-body {
-   background-color: #222222;
-   background: repeating-linear-gradient(45deg, #2b2b2b 0%, #2b2b2b 10%, #222222 0%, #222222 50%) 0 / 15px 15px;
-}
+// body {
+//    background-color: #222222;
+//    background: repeating-linear-gradient(45deg, #2b2b2b 0%, #2b2b2b 10%, #222222 0%, #222222 50%) 0 / 15px 15px;
+// }
 
 li {
 	list-style-type: none;
@@ -26,10 +26,6 @@ p, li {
 	font-size: 30px;
 }
 
-h1 {
-  padding-top: 50px;
-	
-}
 
 .btn-gradient {
   color: white;
@@ -73,6 +69,9 @@ h1 {
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   display: flex;
   align-items: center;
+  min-height: 120px;
+  min-width: 120px;
+  max-width: 100%;
 }
 
 .card-product img {
@@ -92,6 +91,19 @@ h1 {
 }
 
 h1 {
+  padding-top: 50px;
+}
+
+img {
+  max-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  object-fit: cover;
+  object-position: 50% 50%;
+}
+
+h1, h2 {
   font-family: 'Warnes', cursive;
   font-size: 80px;
   text-align: center;
