@@ -2,7 +2,7 @@
   <h2>Add Cocktail</h2>
   <%= simple_form_for [@cocktail] do |f| %>
     <%= f.input :name, label: 'Cocktail Name' %>
-    <%= f.submit class: 'btn btn-gradient' %>
+    <%= f.submit class: 'btn btn-gradient mt-2' %>
     <%= link_to "Back to Drinks List",  cocktails_path, class: 'btn btn-gradient mt-2'  %>
   <% end %>
 </div>
