@@ -1,7 +1,8 @@
 <div class="container p-5">
   <h2>Add Cocktail</h2>
   <%= simple_form_for [@cocktail] do |f| %>
-    <%= f.input :name, label: 'Cocktail Name' %>
+    <%= f.input :name, label: 'Cocktail Name' %><br>
+    <%= f.input :photo, as: :file, class: 'mt-2' %><br>
     <%= f.submit class: 'btn btn-gradient mt-2' %>
     <%= link_to "Back to Drinks List",  cocktails_path, class: 'btn btn-gradient mt-2'  %>
   <% end %>
