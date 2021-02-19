@@ -3,7 +3,7 @@ class Cocktail < ApplicationRecord
   has_many :ingredients, through: :doses
   has_one_attached :photo
 
-  validades :photo, allow_nil: false
+  validates :photo, presence: true, allow_nil: false
 
   before_validation :downcase_and_capitalize_name
 
