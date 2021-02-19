@@ -15,8 +15,6 @@ require("channels")
 //
 // const images = require.context('../images', true)
 // const imagePath = (name) => images(name, true)
-import 'bootstrap';
-
 import { loadDynamicTitleText } from '../components/cocktail';
 
 document.addEventListener('turbolinks:load', () => {
