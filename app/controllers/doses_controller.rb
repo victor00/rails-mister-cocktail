@@ -1,5 +1,6 @@
 class DosesController < ApplicationController
-  before_action :find_cocktail, only: %i[new create]
+  before_action :find_cocktail, except: %i[edit update destroy]
+  before_action :find, only: %i[edit update destroy]
 
   def new
     @dose = Dose.new
@@ -15,8 +16,14 @@ class DosesController < ApplicationController
     end
   end
 
+  def edit; end
+
+  def update
+    @dose.update(dose_params)
+    redirect_to @dose.cocktail
+  end
+
   def destroy
-    find
     @dose.destroy
     redirect_to cocktail_path(@dose.cocktail)
   end
