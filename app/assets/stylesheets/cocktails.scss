@@ -21,6 +21,12 @@ input, label {
 i { 
   color: #e03333;
 }
+
+.banner-btn {
+    background:inherit;
+    z-index: 50;
+}
+
 .drink-icon {
   color: white;
   transition: all .2s ease-in-out;
