@@ -1,5 +1,5 @@
 <div class="container p-5">
-  <h2>Edit Doses</h2>
+  <h2>Edit Dose - <%= @dose.ingredient.name %></h2>
   <%= simple_form_for  @dose do |f| %>
     <%= f.input :description, label: "Dose Description" %>
     <%= f.association :ingredient, collection: Ingredient.all %>
