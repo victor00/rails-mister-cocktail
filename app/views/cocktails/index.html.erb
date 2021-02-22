@@ -15,9 +15,9 @@
 
 <div class="container">
     
-    <div  class="row d-flex">
+    <div class="row d-flex">
         <% @cocktails.each do |cocktail| %>
-            <div data-aos="zoom-in-up" class="card-product col-5 d-flex flex-row justify-content-between mx-3 mt-3 py-3 px-5">
+            <div class="card-product col-5 d-flex flex-row justify-content-between mx-3 mt-3 py-3 px-5">
                 <% if cocktail.photo.attached? %>
                     <%= cl_image_tag cocktail.photo.key, height: 400, width: 400, crop: :fill %>
                 <% else %>
@@ -30,13 +30,8 @@
                 </div>
                 <div class="card-info pr-5">
                     <h3 class="">
-                        <%= link_to cocktail_path(cocktail) do %>
-                             Edit Cocktail - <i class="fas fa-pencil-alt"></i>
-                        <% end %>
-                    </h3>
-                    <h3 class="">
                         <%= link_to cocktail_path(cocktail), method: :delete, data: { confirm: "Delete Cocktail?" } do %>
-                             Delete Cocktail - <i class="fas fa-trash-alt"></i>
+                            <i class="fas fa-trash-alt"></i>
                         <% end %>
                     </h3>
                 </div>
